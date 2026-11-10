@@ -1,0 +1,29 @@
+{
+  "name": "todo-list-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "dev:server": "pnpm --filter server dev",
+    "dev:client": "pnpm --filter client dev",
+    "build": "pnpm --filter \"./apps/*\" build",
+    "build:server": "pnpm --filter server build",
+    "build:client": "pnpm --filter client build",
+    "start": "pnpm --filter server start",
+    "seed": "pnpm --filter server seed",
+    "prisma:push": "pnpm --filter server prisma:push",
+    "prisma:generate": "pnpm --filter server prisma:generate"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "prisma": "6.19.3",
+    "typescript": "^5.7.3"
+  }
+}
